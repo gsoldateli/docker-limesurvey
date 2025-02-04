@@ -7,7 +7,7 @@ services:
     volumes:
       # Hint: This is just an example, change /tmp to something persistent
       - /tmp/upload/surveys:/var/www/html/upload/surveys
-      - /data/coolify/applications/kcso8swkggw4kg84scw44ksw/examples/nginx.conf:/etc/nginx/nginx.conf
+      - /data/coolify/applications/kcso8swkggw4kg84scw44ksw/examples:/etc/nginx
       - lime:/var/www/html
     links:
       - lime-db
