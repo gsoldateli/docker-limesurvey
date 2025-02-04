@@ -5,7 +5,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       # TODO Update storage location as desired
-      - ./surveys:/var/www/html/upload/surveys
+      # - ./surveys:/var/www/html/upload/surveys
+      - /data/coolify/applications/kcso8swkggw4kg84scw44ksw/surveys:/var/www/html/upload/surveys
     networks:
       - limesurvey-db
     ports:
