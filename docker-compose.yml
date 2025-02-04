@@ -11,22 +11,23 @@ services:
     ports:
       - "8082:8082"
     environment:
-      - DB_HOST=lime-db
+      - "DB_TEST_X=testing"
+      - "DB_HOST=lime-db"
       # TODO set passwords
-      - DB_PASSWORD=${DB_PASSWORD}
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD}"
+      - "DB_PASSWORD=${DB_PASSWORD}"
+      - "ADMIN_PASSWORD=${ADMIN_PASSWORD}"
       # If you require an empty table prefix, use a space as the DB_TABLE_PREFIX
-      - DB_TABLE_PREFIX=ls_
+      - "DB_TABLE_PREFIX=ls_"
   lime-db:
     image: mariadb:11.4
     networks:
       - limesurvey-db
     environment:
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - "MYSQL_USER=${MYSQL_USER}"
+      - "MYSQL_DATABASE=${MYSQL_DATABASE}"
       # TODO set passwords
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
 
 networks:
   limesurvey-db:
